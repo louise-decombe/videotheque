@@ -1,0 +1,514 @@
+/******************************/
+/* WARNING: corps général du css */
+/******************************/
+/* suppression des marges */
+/******************************/
+/******************************/
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #242226;
+}
+
+main {
+  background-color: #2C2C32;
+  color: lightgrey;
+}
+
+/******************************/
+/* WARNING: header */
+/******************************/
+/******************************/
+/* image de fond du header */
+/******************************/
+.img-container {
+  background-image: url(https://images.pexels.com/photos/736355/pexels-photo-736355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  height: 1020px;
+  width: 768;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/******************************/
+/* titre et sous titre du header */
+/******************************/
+.in-container {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  color: white;
+  height: auto;
+  margin-top: 700px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.img-container h1 {
+  font-size: 500%;
+  text-shadow: 2px 2px 8px black;
+  color: white;
+}
+
+/******************************/
+/* liens vers les catégories et leurs animations */
+/******************************/
+.img-container a {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  width: 200px;
+  font-weight: bold;
+  padding: 2%;
+  margin: 1%;
+  color: #fff;
+  border: 4px solid white;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out
+}
+
+.btn:hover, .btn:active {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in;
+  box-shadow:
+    2px 2px #53a7ea,
+    4px 4px #53a7ea,
+    6px 6px #53a7ea;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+}
+
+/******************************/
+/* responsive pour le header */
+/******************************/
+@media only screen and (max-width: 920px) {
+  .in-container {
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .in-container {
+    margin-top: 150px;
+  }
+}
+
+/*____________ FIN DU HEADER __________________*/
+/******************************/
+/* WARNING: CSS de la page d'accueil */
+/******************************/
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/******************************/
+/* animation des images en AutoSlide */
+/******************************/
+.image img{
+  margin-top: 2%;
+  width: 940px;
+  height: 627px;
+}
+
+@keyframes AutoSlide {
+  0%, 15%, 100% {
+    left: 0px;
+  }
+
+  35%, 85% {
+    left: -940px;
+  }
+}
+
+#animation {
+  position: relative;
+  width: 940px;
+  overflow: hidden;
+}
+
+#contenu li {
+  display: inline;
+}
+
+#contenu {
+  position: relative;
+  width: 2820px;
+  margin: 0;
+  padding: 0;
+  animation-name: AutoSlide;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/******************************/
+/* paragraphe en dessous des images */
+/******************************/
+.paragraphe section {
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  padding: 2%;
+}
+
+.p1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: white;
+  font-size: 200%;
+  margin: 2%;
+  padding: 2%;
+  font-size: 250%;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.p2 {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  background-color: #948285;
+  font-size: 200%;
+  margin: 2%;
+  padding: 2%;
+  border-radius: 10px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.paragraphe span {
+  font-style: italic;
+}
+
+/*____________ FIN DE LA PAGE ACCUEIL __________________*/
+/******************************/
+/* WARNING: CSS catégorie 1 et 2 pop techno */
+/******************************/
+.h1_categ12 {
+  text-align: center;
+  margin-bottom: 1%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: normal;
+  color: white;
+}
+
+.poptechno {
+  display: flex;
+  flex-direction: row;
+  margin-left: 4%;
+}
+
+.article_categ12 {
+  margin: 0 2% 2% 1%;
+  padding: 1%;
+  width: 30%;
+  border: solid 1px #463739;
+  border-radius: 10px;
+}
+
+.videos_categ12 {
+  box-sizing: content-box;
+  width: 100%;
+}
+
+.p_categ12 {
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  padding-bottom: 1%;
+  box-sizing: content-box;
+  width: 100%;
+  color: #70585C;
+}
+
+.logo_categ12 {
+  display: flex;
+  width: 30px;
+}
+
+/*____________ FIN DE LA PAGE CAT 1 ET 2 __________________*/
+/****** Catégorie 3 : Musique acoustique ******/
+.h1_categ3 {
+  text-align: center;
+  margin-bottom: 1%;
+  font-family: 'Crimson Text', serif, Georgia;
+  font-weight: normal;
+  color: #948285;
+  padding-top: 1%;
+}
+
+.acoustique {
+  display: flex;
+  flex-direction: row;
+  margin-left: 4%;
+}
+
+.article_categ3 {
+  margin: 0 2% 2% 1%;
+  padding: 1%;
+  width: 30%;
+  border: solid 1px #463739;
+}
+
+.videos_categ3 {
+  box-sizing: content-box;
+  width: 100%;
+}
+
+.p_categ3 {
+  text-align: center;
+  padding-bottom: 1%;
+  box-sizing: content-box;
+  width: 100%;
+  color: #70585C;
+  font-family: 'Quicksand', sans-serif, Arial;
+}
+
+.logo_categ3 {
+  width: 30px;
+  display: block;
+  margin-left: 40%;
+}
+
+/*____________ FIN DE LA PAGE CAT 3 __________________*/
+/****** Catégorie 4 : Musique classique *****/
+.h1_categ4 {
+  text-align: center;
+  margin-bottom: 1%;
+  font-family: 'Crimson Text', serif, Georgia;
+  font-weight: normal;
+  color: #948285;
+  padding-top: 1%;
+}
+
+.h2_categ4 {
+  text-align: center;
+  margin-bottom: 1%;
+  margin-top: 1%;
+  font-family: 'Crimson Text', serif, Georgia;
+  font-weight: normal;
+}
+
+.classique {
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 5%;
+  padding-right: 1%;
+  background-color: #3F3F4A;
+}
+
+.article_categ4 {
+  margin: 0 1% 2% 1%;
+  padding: 1%;
+  width: 30%;
+}
+
+.videos_categ4 {
+  box-sizing: content-box;
+  width: 100%;
+}
+
+.p_categ4 {
+  text-align: justify;
+  padding-bottom: 1%;
+  width: 100%;
+  color: #ADADB1;
+  line-height: 1.5em;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.link_categ4 {
+  text-decoration: none;
+  color: grey;
+}
+
+.link_categ4:hover {
+  color: white;
+}
+
+/*____________ FIN DE LA PAGE CAT 4 __________________*/
+/***** Catégorie 5 : rap ********/
+.h1_categ5 {
+  text-align: center;
+  margin-bottom: 1%;
+  font-family: 'Crimson Text', serif, Georgia;
+  font-weight: normal;
+  color: #948285;
+  font-size: 30px;
+  padding-top: 1%;
+}
+
+.h2_categ5 {
+  text-align: center;
+  font-family: 'Crimson Text', serif, Georgia;
+  font-weight: normal;
+  color: #948285;
+  margin-top: 3%;
+}
+
+.intro_categ5 {
+  text-align: center;
+  width: 80%;
+  margin-left: 10%;
+  font-family: 'Quicksand', sans-serif, Arial;
+  font-style: italic;
+  color: grey;
+}
+
+.rap {
+  display: flex;
+  flex-direction: row;
+  border: solid 1px #463739;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.article_categ5 {
+  margin: 0 1% 2% 1%;
+  padding: 1%;
+  width: 30%;
+}
+
+.videos_categ5 {
+  box-sizing: content-box;
+  width: 100%;
+}
+
+.p_categ5 {
+  text-align: center;
+  padding-bottom: 1%;
+  font-family: 'Quicksand', sans-serif, Arial;
+  color: lightgrey;
+}
+
+.logo_categ5 {
+  width: 30px;
+  display: block;
+  margin-left: 48%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+
+/*____________ FIN DE LA PAGE CAT 5 __________________*/
+/******************************/
+/******Responsive *****/
+/******************************/
+
+
+@media (max-width: 1000px) {
+  .poptechno {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+  }
+
+  .article_categ12 {
+    margin: 0 2% 2% 1%;
+    padding: 1%;
+    width: 70%;
+    border: solid 1px #463739;
+  }
+}
+
+
+/*** Page Acoustique ***/
+@media (max-width: 1000px) {
+  .acoustique {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+  }
+
+  .article_categ3 {
+    margin: 0 2% 2% 1%;
+    padding: 1%;
+    width: 70%;
+    border: solid 1px #463739;
+  }
+
+  /*** Page musique classique ***/
+  .classique {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 15%;
+  }
+
+  .article_categ4 {
+    margin: 0 2% 2% 1%;
+    padding-left: 6%;
+    width: 70%;
+  }
+
+  /*** Page Rap ***/
+  .rap {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 15%;
+    border: none;
+  }
+
+  .article_categ5 {
+    margin: 0 2% 2% 1%;
+    padding: 2%;
+    width: 70%;
+    border: solid 1px #463739;
+    border-radius: 5px;
+  }
+
+  .intro_categ5 {
+    width: 50%;
+    text-align: justify;
+    margin-left: 17%;
+  }
+
+  .h2_categ5 {
+    text-align: left;
+    margin-left: 33%;
+  }
+}
+
+/******************************/
+/******** Footer **********/
+/******************************/
+footer{
+	display:flex;
+	flex-direction:row;
+	background-color: #58706C;
+	padding:2% 1% 2% 1%;
+}
+.footer_left{
+	padding-right: 50%;
+	width:20%;
+}
+.footer_right{
+	width:40%;
+}
+
+.footer_link{
+	color: black;
+	font-family: 'Josefin Sans', sans-serif, Georgia;
+	font-size:14px;
+	padding: 1% 1% 1% 1%;
+	text-decoration: none;
+	font-weight:bold;
+}
+.footer_link:hover{
+	color:lightgrey;
+}
+
+/*____________ FIN DU FOOTER __________________*/
